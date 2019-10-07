@@ -3,7 +3,7 @@ import json
 import glob
 import os
 
-def read_CSV():
+def convert_to_json():
     for filename in glob.glob('./csv/*.csv'):
 
         csvfile = os.path.splitext(filename)[0]
@@ -17,4 +17,4 @@ def read_CSV():
             json.dump(rows, f)
 
 
-read_CSV()
+convert_to_json()
